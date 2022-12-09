@@ -4,10 +4,10 @@ var mysql = require("mysql");
 var app = express();
 var bodyParser = require("body-parser");
 
-
+// made by malyaj singh 2010991425
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
-
+// made by malyaj singh 2010991425
 //inserting user data or new user
 app.post("/save", function (request, response) {
   var connection = mysql.createConnection({
@@ -16,14 +16,14 @@ app.post("/save", function (request, response) {
     password: "",
     database: "students",
   });
-
+// made by malyaj singh 2010991425
   var username = request.body.username;
   var password = request.body.password;
   var fname = request.body.fname;
   var gender = request.body.gender;
   var pno = request.body.pno;
   
-
+// made by malyaj singh 2010991425
   if (username.length > 50 ||password.length < 8 ||fname.length > 50 ||gender == null ||pno.length > 10 ||pno.length < 10/**/) {
     response.render("signup copy");
   }
@@ -40,7 +40,7 @@ app.post("/save", function (request, response) {
           if(obj==true){
             console.log("found");
             response.render("signup copy 2");
-          }
+          }// made by malyaj singh 2010991425
           else{
             console.log("not found");
             var sql ="insert into st2(username,password,fname,gender,pno) values('"+username+"','"+password+"','"+fname+"','"+gender+"','"+pno+"')";
@@ -50,8 +50,8 @@ app.post("/save", function (request, response) {
             })
           }
         });
-
-        
+// made by malyaj singh 2010991425
+        // made by malyaj singh 2010991425
       });
   }
 });
@@ -67,7 +67,7 @@ app.get("/signinback",function(request,response){
         })
     })
 })
-
+// made by malyaj singh 2010991425
 app.post("/signin",function(request,response){
     var connection = mysql.createConnection({
         host: "localhost",
@@ -77,7 +77,7 @@ app.post("/signin",function(request,response){
       });
     var username = request.body.username;
     var password = request.body.password;
-
+// made by malyaj singh 2010991425
     connection.connect(function (errror) {
         connection.query("select * from st2", function (errror, result) {
           var obj=false;
@@ -100,7 +100,7 @@ app.post("/signin",function(request,response){
           else{
             console.log("not found");
             response.render("login copy");
-            
+            // made by malyaj singh 2010991425
           }
         });       
       }); 
