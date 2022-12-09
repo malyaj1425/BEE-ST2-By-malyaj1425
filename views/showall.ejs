@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      body{
+        background-image: url("");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: black;
+      }
+      @media screen and (max-width:1280px){
+        body{
+          background-repeat: repeat-y;
+        }
+      }
+      table{
+        color: aqua;
+        width: 100%;
+      }
+      table th,td{
+        padding: 10px;
+      }
+      .tble{
+        margin-top: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+    </style>
+</head>
+<body>
+    <center><h1>ALL USERS</h1></center>
+      <div class="tble">
+      <table border="2">
+        <tr>
+          <th>ID</th>
+          <th>USERNAME</th>
+          <th>NAME</th>
+          <th>GENDER</th>
+          <th>PHONE NUMBER</th>
+          
+          
+      </tr>
+      <%for(var i=0;i<results.length;i++)
+      { %>
+        <tr>
+          <td><%= results[i].id %></td>
+          <td><%= results[i].username %></td>
+          <td><%= results[i].fname %></td>
+          <td><%= results[i].gender %></td>
+          <td><%= results[i].pno %></td>      
+      </tr>
+      <%}
+      %>
+      </table>
+    </div>
+</body>
+</html>

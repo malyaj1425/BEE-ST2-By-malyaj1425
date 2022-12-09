@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+        body{
+         background-image: url("https://thumbs.gfycat.com/AlarmingJaggedAlaskankleekai-size_restricted.gif");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-color: black;
+       }
+       @media screen and (max-width:1280px){
+         body{
+           background-repeat: repeat-y;
+         }
+       }
+       .container {
+         width: 50%;
+         margin-top: 50px;
+         background-color: rgb(255, 255, 255);
+         padding: 10px;
+         padding-left: 10px;
+         padding-right: 10px;
+         border-radius: 10px;
+       }
+       .subcontainer{
+         margin-top: 10px;
+         margin-bottom: 10px;
+       }
+       .subcontainer input {
+         width: 100%;
+       }
+       #submitbtn{
+         background-color: aqua;
+         border: none;
+       }
+       h1{
+         color: black;
+         text-shadow: aqua 2px 2px;
+       }
+     </style>
+</head>
+<body>
+    <form action="\save" method="post">
+        <div class="container">
+        <center>
+            <h1>
+                JOIN US
+            </h1>
+        </center>
+        <center><label style="color: red; background-color: black;">invalid sign up data</label></center>
+        <div class="subcontainer"><input type="text" name="username" placeholder="Enter Username" required/><br /></div>
+        <div class="subcontainer"><label>password must consist of 8 characters</label><input type="password" name="password" placeholder="Enter Password" required/><br /></div>
+        <div class="subcontainer"><input type="text" name="fname" placeholder="Enter First Name" required/><br /></div>
+        <input type="radio" name="gender" value="male"> Male<input type="radio" name="gender" value="female"> Female<br />
+        <div class="subcontainer"><input type="number" name="pno" placeholder="Enter Phone Number" required/><br /></div>
+        <div class="subcontainer"><input type="submit" id="submitbtn"/></div>
+    </div>
+      </form>
+</body>
+</html>
